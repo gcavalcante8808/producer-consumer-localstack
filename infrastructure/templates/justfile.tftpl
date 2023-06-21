@@ -1,0 +1,9 @@
+
+
+# Call the PRODUCER lambda URL, forcing it to produce logs.
+call-producer:
+    curl -X POST -H "Host: ${producer_host}" -d '{}' http://localhost:4566
+
+# Call the CONSUMER lambda URL, forcing it to produce logs.
+call-consumer:
+    curl -X POST -H "Host: ${consumer_host}" -d '{}' http://localhost:4566
